@@ -3,10 +3,17 @@ using System.Collections;
 
 public class PlayerWeaponScript : MonoBehaviour {
 
-	protected WeaponScript currentWeapon;
+	private WeaponScript currentWeapon;
 	
 	// Update is called once per frame
-	void Update () {
-	
+	public void Update () {
+		if(currentWeapon != null) {
+			if(Input.GetButtonDown("attack"))
+				currentWeapon.Use();
+		}
+	}
+
+	public void EquipWeapon(WeaponScript weapon) {
+		currentWeapon = gameObject.AddComponent(weapon.GetType().ToString()) as WeaponScript;
 	}
 }
