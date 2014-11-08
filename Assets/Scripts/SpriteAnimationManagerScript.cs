@@ -37,7 +37,10 @@ public class SpriteAnimationManagerScript : MonoBehaviour {
 	}
 
 	public void PlayAnimation(string animationName = null, int startFrame = 0) {
-		
+
+		if(animationName == currentAnimationName)
+			return;
+
 		frameTimer = 0;
 		paused = false;
 
