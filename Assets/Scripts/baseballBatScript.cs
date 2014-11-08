@@ -16,5 +16,6 @@ public class BaseballBatScript : WeaponScript{
 	public override void Use ()
 	{
 		base.Use ();
+		Debug.Log("Baseball Bat Crush!");
 	}
 }
