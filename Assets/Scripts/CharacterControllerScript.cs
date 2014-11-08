@@ -3,6 +3,7 @@ using System.Collections;
 
 public class CharacterControllerScript : MonoBehaviour {
 	SpriteAnimationManagerScript manager;
+
 	public float speed = 2.0f;
 	public float jumpHeight = 250.0f;
 	public bool jumping = false;
@@ -28,11 +29,19 @@ public class CharacterControllerScript : MonoBehaviour {
 		else if (Input.GetButton ("Left")) {
 			this.gameObject.transform.position = 
 				new Vector2 ((transform.position.x - speed * Time.deltaTime), transform.position.y);
+
+			manager.PlayAnimation("WalkLeft");
+			manager.PauseAnimation(false);
 		} 
-		if (Input.GetButton ("Jump")) {
-			if(!jumping){
-				rigidbody2D.AddForce(new Vector2(0, jumpHeight));
-				jumping = true;
+		else if(Input.GetButtonUp("Left")){
+			manager.PauseAnimation(true);
+		}
+		else if (Input.GetButton ("Jump")) {
+			if (Input.GetButton ("Jump")) {
+				if(!jumping){
+					rigidbody2D.AddForce(new Vector2(0, jumpHeight));
+					jumping = true;
+				}
 			}
 		}
 	}
