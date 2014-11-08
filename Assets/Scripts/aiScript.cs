@@ -4,6 +4,7 @@ using System.Collections;
 public class AiScript : MonoBehaviour {
 
 	public int speed;
+	public GameObject triggerVolume;
 	public Vector2 moveTarget;
 
 
