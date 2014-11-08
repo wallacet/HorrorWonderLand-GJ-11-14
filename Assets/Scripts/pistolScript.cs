@@ -4,13 +4,13 @@ using System.Collections;
 public class pistolScript : weaponScript {
 
 	// Use this for initialization
-	void Start () {
-	
+	public override void Start () {
+		base.Start ();
 	}
 	
 	// Update is called once per frame
-	void Update () {
-	
+	public override void Update () {
+		base.Update ();
 	}
 
 	public override void Use ()

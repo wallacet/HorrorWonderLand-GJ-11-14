@@ -3,13 +3,15 @@ using System.Collections;
 
 public class weaponScript : MonoBehaviour {
 
+	public int damage;
+
 	// Use this for initialization
-	public void Start () {
+	public virtual void Start () {
 	
 	}
 	
 	// Update is called once per frame
-	public void Update () {
+	public virtual void Update () {
 	
 	}
 
