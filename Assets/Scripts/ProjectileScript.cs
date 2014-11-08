@@ -13,12 +13,18 @@ public class ProjectileScript : MonoBehaviour {
 	}
 
 
+	private float timeToLive = 10.0f;
+
 	
 	// Update is called once per frame
 	public void Update () {
+		if(timeToLive <= 0) {
+			Destroy(gameObject);
+		}
 		gameObject.transform.position += new Vector3(velocity.x * Time.deltaTime, velocity.y * Time.deltaTime, 0);
 
 		velocity = new Vector2(velocity.x, velocity.y - gravity * Time.deltaTime);
+		timeToLive -= Time.deltaTime;
 	}
 
 	public void OnCollisionEnter2D(Collision2D other) {
