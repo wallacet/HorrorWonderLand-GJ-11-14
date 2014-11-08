@@ -62,7 +62,7 @@ public class CharacterControllerScript : MonoBehaviour {
 
 	public void OnCollisionEnter2D(Collision2D other) {
 		if(other.gameObject.tag == "Ground" || other.gameObject.tag == "Platform") {
-			if(collider2D.bounds.min.y >= other.collider.bounds.max.y) {
+			if(collider2D.bounds.min.y > other.collider.bounds.max.y) {
 				jumping = false;
 			}
 		}
