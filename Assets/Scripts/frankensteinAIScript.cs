@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class zombieScript : enemyScript {
+public class frankensteinAIScript : aiScript {
 
 	// Use this for initialization
 	void Start () {

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class zombieScript : enemyScript {
+public class pancakeLauncherScript : weaponScript {
 
 	// Use this for initialization
 	void Start () {
@@ -11,5 +11,10 @@ public class zombieScript : enemyScript {
 	// Update is called once per frame
 	void Update () {
 	
+	}
+
+	public override void Use ()
+	{
+		base.Use ();
 	}
 }

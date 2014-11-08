@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class zombieAIScript : MonoBehaviour {
+public class zombieAIScript : aiScript {
 
 	// Use this for initialization
 	void Start () {
@@ -11,5 +11,10 @@ public class zombieAIScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
+	}
+
+	public override void Move ()
+	{
+		base.Move ();
 	}
 }

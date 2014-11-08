@@ -3,23 +3,25 @@ using System.Collections;
 
 public class aiScript : MonoBehaviour {
 
-	private int speed;
-	private Vector2 target;
+	public int speed;
+	public Vector2 moveTarget;
 
 
 
 	// Use this for initialization
-	void Start () {
+	public void Start () {
 	
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	public void Update () {
 	
 	}
 
-	private void Move(){
+	public virtual void Move(){
 
 	}
+
+
 
 }

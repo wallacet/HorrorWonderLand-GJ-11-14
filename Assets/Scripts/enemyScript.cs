@@ -4,25 +4,19 @@ using System.Collections;
 public abstract class enemyScript : MonoBehaviour {
 
 
-	private int damage;
-
-	public int Damage{
-		get { return damage; }
-		set { damage = value; }
-	}
-
-
+	public int damage;
 
 	// Use this for initialization
-	void Start () {
+	public void Start () {
 	
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	public void Update () {
 	
 	}
 
+	//might move this to AI script
 	public virtual void useAbility() {
 
 	}
