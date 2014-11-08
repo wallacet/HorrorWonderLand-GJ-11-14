@@ -5,6 +5,8 @@ public class WeaponScript : MonoBehaviour {
 
 	public GameObject projectile;
 	public int damage;
+	public float recoilAmount = 0;
+	public float recoilLength = 0;
 
 	// Use this for initialization
 	public virtual void Start () {
@@ -39,5 +41,11 @@ public class WeaponScript : MonoBehaviour {
 		}
 		else
 			Debug.LogWarning("No projectile set.");
+
+		
+		CameraShakeScript tmp = gameObject.GetComponent<CameraShakeScript>();
+		tmp.shake = recoilLength;
+		tmp.shakeAmount = recoilAmount;
 	}
+
 }

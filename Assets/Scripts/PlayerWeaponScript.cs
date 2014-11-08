@@ -20,5 +20,7 @@ public class PlayerWeaponScript : MonoBehaviour {
 		currentWeapon = gameObject.AddComponent(weapon.GetType().ToString()) as WeaponScript;
 		currentWeapon.projectile = weapon.projectile;
 		currentWeapon.damage = weapon.damage;
+		currentWeapon.recoilAmount = weapon.recoilAmount;
+		currentWeapon.recoilLength = weapon.recoilLength;
 	}
 }
