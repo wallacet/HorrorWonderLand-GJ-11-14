@@ -2,26 +2,23 @@
 using System.Collections;
 
 public class CharacterControllerScript : MonoBehaviour {
-
+	SpriteAnimationManagerScript manager;
 	// Use this for initialization
 	void Start () {
+		manager = GetComponent<SpriteAnimationManagerScript> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetButton ("Right") || Input.GetButton ("Left")) {
-			if(gameObject.transform.position.x < 100 && gameObject.transform.position.y == 0){
-				this.gameObject.transform.position = new Vector2((transform.position.x + 1), transform.position.y);
-			}
-			else if(gameObject.transform.position.x == 100 && gameObject.transform.position.y < 100){
-				this.gameObject.transform.position = new Vector2(transform.position.x, transform.position.y +1);
-			}
-			else if(gameObject.transform.position.x > 0 && gameObject.transform.position.y == 100){
-				this.gameObject.transform.position = new Vector2(transform.position.x-1, transform.position.y);
-			}
-			else if(gameObject.transform.position.x == 0 && gameObject.transform.position.y > 0){
-				this.gameObject.transform.position = new Vector2(transform.position.x, transform.position.y-1);
-			}
+		if (Input.GetButton ("Right")) {
+			this.gameObject.transform.position = new Vector2 ((transform.position.x + 1), transform.position.y);
+			manager.PlayAnimation("WalkRight");
+		} 
+		else if (Input.GetButton ("Left")) {
+			this.gameObject.transform.position = new Vector2 ((transform.position.x - 1), transform.position.y);
+		} 
+		else if (Input.GetButton ("Jump")) {
+				this.gameObject.transform.position = new Vector2 ((transform.position.x), transform.position.y + 1);
 		}
 	}
 }

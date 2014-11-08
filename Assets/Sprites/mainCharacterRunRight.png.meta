@@ -1,7 +1,20 @@
 fileFormatVersion: 2
 guid: dbe9271a654625a4bae33081f3ff189d
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: mainCharacterRunRight_0
+    21300002: mainCharacterRunRight_1
+    21300004: mainCharacterRunRight_2
+    21300006: mainCharacterRunRight_3
+    21300008: mainCharacterRunRight_4
+    21300010: mainCharacterRunRight_5
+    21300012: mainCharacterRunRight_6
+    21300014: mainCharacterRunRight_7
+    21300016: mainCharacterRunRight_8
+    21300018: mainCharacterRunRight_9
+    21300020: mainCharacterRunRight_10
+    21300022: mainCharacterRunRight_11
+    21300024: mainCharacterRunRight_13
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -25,13 +38,13 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 1
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -42,6 +55,136 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: mainCharacterRunRight_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 20
+        width: 108
+        height: 152
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: mainCharacterRunRight_1
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 15
+        width: 109
+        height: 160
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: mainCharacterRunRight_2
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 12
+        width: 97
+        height: 161
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: mainCharacterRunRight_3
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 12
+        width: 81
+        height: 163
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: mainCharacterRunRight_4
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 11
+        width: 86
+        height: 161
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: mainCharacterRunRight_5
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 16
+        width: 106
+        height: 153
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: mainCharacterRunRight_6
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 17
+        width: 119
+        height: 151
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: mainCharacterRunRight_7
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 11
+        width: 124
+        height: 161
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: mainCharacterRunRight_8
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 10
+        width: 98
+        height: 165
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: mainCharacterRunRight_9
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 12
+        width: 108
+        height: 158
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: mainCharacterRunRight_10
+      rect:
+        serializedVersion: 2
+        x: 1527
+        y: 12
+        width: 104
+        height: 160
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: mainCharacterRunRight_11
+      rect:
+        serializedVersion: 2
+        x: 1675
+        y: 13
+        width: 96
+        height: 157
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: mainCharacterRunRight_13
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 19
+        width: 108
+        height: 155
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
