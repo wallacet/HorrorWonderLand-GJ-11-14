@@ -34,6 +34,8 @@ public class WeaponScript : MonoBehaviour {
 			if(gameObject.GetComponent<CharacterControllerScript>().facingLeft){
 				temp.GetComponent<ProjectileScript>().velocity *= -1;
 			}
+
+			temp.GetComponent<ProjectileScript>().damage = damage;
 		}
 		else
 			Debug.LogWarning("No projectile set.");
