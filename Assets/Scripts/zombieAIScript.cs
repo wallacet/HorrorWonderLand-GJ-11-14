@@ -8,7 +8,6 @@ public class ZombieAIScript : AiScript {
 	// Use this for initialization
 	public override void Start () {
 		base.Start ();
-		position = this.gameObject.transform.position;
 	}
 	
 	// Update is called once per frame
@@ -20,21 +19,30 @@ public class ZombieAIScript : AiScript {
 	public override void Move ()
 	{
 		base.Move ();
-		if(moveTarget.x < position.x)
+		Debug.Log ("zombie move");
+		Debug.Log ("position: " + this.gameObject.transform.position);
+		Debug.Log ("move target: " + moveTarget);
+		if(moveTarget.x < this.gameObject.transform.position.x)
 		{
-			position = new Vector2(( position.x - this.speed * Time.deltaTime), position.y);
+			this.gameObject.transform.position = new Vector2(
+				( this.gameObject.transform.position.x - this.speed * Time.deltaTime), 
+				this.gameObject.transform.position.y);
 		}
 		else
 		{
-			position = new Vector2(( position.x + this.speed * Time.deltaTime), position.y);
+			this.gameObject.transform.position = new Vector2(
+				( this.gameObject.transform.position.x + this.speed * Time.deltaTime), 
+				this.gameObject.transform.position.y);
 		}
 	}
 
 	public override void Alerted ()
 	{
+		//Debug.Log ("alerted is called");
 		base.Alerted ();
 		if (isTriggered) 
 		{
+			Debug.Log ("trigger is ture");
 			this.Move();
 		}
 	}

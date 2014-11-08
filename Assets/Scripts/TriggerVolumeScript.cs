@@ -17,9 +17,12 @@ public class TriggerVolumeScript : MonoBehaviour {
 		
 	}
 
-	public void OnCollisionEnter2D(Collision2D other) {
+	public void OnTriggerEnter2D(Collider2D other) {
+		Debug.Log ("colliding");
 		if (other.gameObject.tag == "Player") 
 		{
+			Debug.Log ("colliding with player");
+			playerPosition = other.gameObject.transform.position;
 			isTriggered = true;
 		} 
 		else 
