@@ -24,6 +24,7 @@ public class AiScript : MonoBehaviour {
 
 	public virtual void Alerted(){
 		isTriggered = triggerVolume.GetComponent<TriggerVolumeScript> ().isTriggered;
+		moveTarget = triggerVolume.GetComponent<TriggerVolumeScript> ().playerPosition;
 	}
 
 }
