@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class frankensteinScript : enemyScript {
+public class FrankensteinScript : EnemyScript {
 
 	// Use this for initialization
 	public override void Start () {

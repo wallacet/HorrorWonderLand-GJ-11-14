@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class pancakeLauncherScript : weaponScript {
+public class PancakeLauncherScript : WeaponScript {
 
 	// Use this for initialization
 	public override void Start () {

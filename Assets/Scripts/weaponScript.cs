@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class weaponScript : MonoBehaviour {
+public class WeaponScript : MonoBehaviour {
 
 	public int damage;
 

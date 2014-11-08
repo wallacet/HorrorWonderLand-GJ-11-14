@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class zombieAIScript : aiScript {
+public class ZombieAIScript : AiScript {
 
 	// Use this for initialization
 	public override void Start () {

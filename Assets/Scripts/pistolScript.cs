@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class pistolScript : weaponScript {
+public class PistolScript : WeaponScript {
 
 	// Use this for initialization
 	public override void Start () {

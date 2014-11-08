@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class frankensteinAIScript : aiScript {
+public class FrankensteinAIScript : AiScript {
 
 	// Use this for initialization
 	public override void Start () {

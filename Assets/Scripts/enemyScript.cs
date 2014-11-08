@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public abstract class enemyScript : MonoBehaviour {
+public abstract class EnemyScript : MonoBehaviour {
 
 
 	public int damage;

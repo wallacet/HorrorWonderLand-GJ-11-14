@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class aiScript : MonoBehaviour {
+public class AiScript : MonoBehaviour {
 
 	public int speed;
 	public Vector2 moveTarget;
