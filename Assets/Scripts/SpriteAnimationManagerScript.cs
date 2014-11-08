@@ -11,7 +11,9 @@ public class SpriteAnimationManagerScript : MonoBehaviour {
 	public bool playOnAwake = true;
 	public string currentAnimationName{
 		get{
-			return currentAnim.animationName;
+			if(currentAnim != null)
+				return currentAnim.animationName;
+			return null;
 		}
 	}
 
