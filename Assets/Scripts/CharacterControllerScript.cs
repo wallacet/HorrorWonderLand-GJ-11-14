@@ -8,6 +8,10 @@ public class CharacterControllerScript : MonoBehaviour {
 	public float jumpHeight = 250.0f;
 	public bool jumping = false;
 
+	private bool applyForce = false;
+	private int forceFrameDelay = 10;
+	private int currentFramesDelay = 0;
+
 	// Use this for initialization
 	void Start () {
 		manager = GetComponent<SpriteAnimationManagerScript> ();
@@ -38,17 +42,29 @@ public class CharacterControllerScript : MonoBehaviour {
 		}
 		if (Input.GetButton ("Jump")) {
 			if (Input.GetButton ("Jump")) {
-				if(!jumping){
-					rigidbody2D.AddForce(new Vector2(0, jumpHeight));
+				if(!jumping && currentFramesDelay == 0){
+					applyForce = true;
 					jumping = true;
 				}
 			}
 		}
 	}
 
+	public void FixedUpdate() {
+		if(applyForce) {
+			currentFramesDelay = forceFrameDelay;
+			rigidbody2D.AddForce(new Vector2(0, jumpHeight));
+			applyForce = false;
+		}
+		if(currentFramesDelay > 0)
+			currentFramesDelay--;
+	}
+
 	public void OnCollisionEnter2D(Collision2D other) {
 		if(other.gameObject.tag == "Ground" || other.gameObject.tag == "Platform") {
-			jumping = false;
+			if(collider2D.bounds.min.y >= other.collider.bounds.max.y) {
+				jumping = false;
+			}
 		}
 	}
 }
