@@ -3,8 +3,8 @@ using System.Collections;
 
 public class CharacterControllerScript : MonoBehaviour {
 	SpriteAnimationManagerScript manager;
-	public float speed = 2.0f;
-	public float jumpHeight = 5.0f;
+	public float speed = 5.0f;
+	public float jumpHeight = 10.0f;
 	// Use this for initialization
 	void Start () {
 		manager = GetComponent<SpriteAnimationManagerScript> ();
