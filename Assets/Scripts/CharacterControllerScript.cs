@@ -69,8 +69,12 @@ public class CharacterControllerScript : MonoBehaviour {
 				jumping = false;
 			}
 		}
-		else if(other.gameObject.tag == "Bumper"){
-			Rigidbody2D.AddForce(new Vector2(0, jumpHeight * 3));
+	}
+
+	public void OnTriggerEnter2D(Collider2D other){
+		if (other.gameObject.tag == "Bumper") {
+				applyForce = true;
+				rigidbody2D.AddForce (new Vector2 (0, jumpHeight * 1.5f));
 		}
 	}
 }
