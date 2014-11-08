@@ -7,6 +7,7 @@ public class CharacterControllerScript : MonoBehaviour {
 	public float speed = 2.0f;
 	public float jumpHeight = 250.0f;
 	public bool jumping = false;
+	public bool facingLeft = false;
 
 	private bool applyForce = false;
 	private int forceFrameDelay = 10;
@@ -26,6 +27,7 @@ public class CharacterControllerScript : MonoBehaviour {
 
 			manager.PlayAnimation("WalkRight");
 			manager.PauseAnimation(false);
+			facingLeft = false;
 		} 
 		else if(Input.GetButtonUp("Right")){
 			manager.PauseAnimation(true);
@@ -36,6 +38,7 @@ public class CharacterControllerScript : MonoBehaviour {
 
 			manager.PlayAnimation("WalkLeft");
 			manager.PauseAnimation(false);
+			facingLeft = true;
 		} 
 		else if(Input.GetButtonUp("Left")){
 			manager.PauseAnimation(true);

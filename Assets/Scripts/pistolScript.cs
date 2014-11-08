@@ -16,6 +16,25 @@ public class PistolScript : WeaponScript {
 	public override void Use ()
 	{
 		base.Use ();
-		Debug.Log("Pistol Bang!");
+		if(projectile != null) {
+			Vector3 spawnPoint = gameObject.transform.position;
+			if(GetComponent<CharacterControllerScript>().facingLeft){
+				spawnPoint -= new Vector3(projectile.GetComponent<ProjectileScript>().width / 2.0f
+				                          + gameObject.GetComponent<BoxCollider2D>().size.x / 2.0f + 0.1f,
+				                          0,0);
+			}
+			else{
+				spawnPoint += new Vector3(projectile.GetComponent<ProjectileScript>().width / 2.0f
+				                          + gameObject.GetComponent<BoxCollider2D>().size.x / 2.0f + 0.1f,
+				                          0,0);
+			}
+			GameObject temp = Instantiate(projectile, spawnPoint, Quaternion.identity) as GameObject;
+
+			if(gameObject.GetComponent<CharacterControllerScript>().facingLeft){
+				temp.GetComponent<ProjectileScript>().velocity *= -1;
+			}
+		}
+		else
+			Debug.LogWarning("No projectile set.");
 	}
 }

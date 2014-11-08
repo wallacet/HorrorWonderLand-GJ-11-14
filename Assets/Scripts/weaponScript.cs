@@ -3,6 +3,7 @@ using System.Collections;
 
 public class WeaponScript : MonoBehaviour {
 
+	public GameObject projectile;
 	public int damage;
 
 	// Use this for initialization

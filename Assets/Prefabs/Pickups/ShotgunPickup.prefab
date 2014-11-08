@@ -16,7 +16,7 @@ GameObject:
   - 114: {fileID: 11400006}
   - 114: {fileID: 11400008}
   m_Layer: 0
-  m_Name: BaseballPickup
+  m_Name: ShotgunPickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -53,9 +53,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c889ec2c0a9e0844beba20876887f9e, type: 3}
+  m_Script: {fileID: 11500000, guid: c3d970843e70ba744a96d698d0d45139, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectile: {fileID: 0}
   damage: 0
 --- !u!114 &11400002
 MonoBehaviour:

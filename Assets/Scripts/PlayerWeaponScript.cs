@@ -18,5 +18,6 @@ public class PlayerWeaponScript : MonoBehaviour {
 			Destroy(currentWeapon);
 
 		currentWeapon = gameObject.AddComponent(weapon.GetType().ToString()) as WeaponScript;
+		currentWeapon.projectile = weapon.projectile;
 	}
 }

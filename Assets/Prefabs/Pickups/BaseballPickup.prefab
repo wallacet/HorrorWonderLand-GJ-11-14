@@ -10,13 +10,13 @@ GameObject:
   - 4: {fileID: 400000}
   - 212: {fileID: 21200000}
   - 61: {fileID: 6100000}
-  - 114: {fileID: 11400008}
-  - 114: {fileID: 11400006}
-  - 114: {fileID: 11400004}
-  - 114: {fileID: 11400002}
   - 114: {fileID: 11400000}
+  - 114: {fileID: 11400002}
+  - 114: {fileID: 11400004}
+  - 114: {fileID: 11400006}
+  - 114: {fileID: 11400008}
   m_Layer: 0
-  m_Name: PistolPickup
+  m_Name: BaseballPickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +29,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.30367422, y: .691131651, z: 0}
+  m_LocalPosition: {x: 3.19632578, y: .691131651, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -53,21 +53,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e287bb4e34132d44bb444ed161867ee2, type: 3}
+  m_Script: {fileID: 11500000, guid: 9c889ec2c0a9e0844beba20876887f9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationName: Death
-  rate: 20
-  loop: 0
-  sprites:
-  - {fileID: 21300000, guid: 8e0d24b8d196b89418f443b95e75c2bf, type: 3}
-  - {fileID: 21300002, guid: 8e0d24b8d196b89418f443b95e75c2bf, type: 3}
-  - {fileID: 21300004, guid: 8e0d24b8d196b89418f443b95e75c2bf, type: 3}
-  - {fileID: 21300006, guid: 8e0d24b8d196b89418f443b95e75c2bf, type: 3}
-  - {fileID: 21300008, guid: 8e0d24b8d196b89418f443b95e75c2bf, type: 3}
-  - {fileID: 21300010, guid: 8e0d24b8d196b89418f443b95e75c2bf, type: 3}
-  - {fileID: 21300012, guid: 8e0d24b8d196b89418f443b95e75c2bf, type: 3}
-  - {fileID: 21300014, guid: 8e0d24b8d196b89418f443b95e75c2bf, type: 3}
+  projectile: {fileID: 0}
+  damage: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -76,14 +66,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e287bb4e34132d44bb444ed161867ee2, type: 3}
+  m_Script: {fileID: 11500000, guid: c79a767bc43c0154ea17facec654eeaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationName: Idle
-  rate: 10
-  loop: 1
-  sprites:
-  - {fileID: 21300000, guid: 8e0d24b8d196b89418f443b95e75c2bf, type: 3}
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -106,9 +91,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c79a767bc43c0154ea17facec654eeaa, type: 3}
+  m_Script: {fileID: 11500000, guid: e287bb4e34132d44bb444ed161867ee2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationName: Idle
+  rate: 10
+  loop: 1
+  sprites:
+  - {fileID: 21300000, guid: 8e0d24b8d196b89418f443b95e75c2bf, type: 3}
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -117,10 +107,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a115ea682541e3648a50da7b8be0ff33, type: 3}
+  m_Script: {fileID: 11500000, guid: e287bb4e34132d44bb444ed161867ee2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
+  animationName: Death
+  rate: 20
+  loop: 0
+  sprites:
+  - {fileID: 21300000, guid: 8e0d24b8d196b89418f443b95e75c2bf, type: 3}
+  - {fileID: 21300002, guid: 8e0d24b8d196b89418f443b95e75c2bf, type: 3}
+  - {fileID: 21300004, guid: 8e0d24b8d196b89418f443b95e75c2bf, type: 3}
+  - {fileID: 21300006, guid: 8e0d24b8d196b89418f443b95e75c2bf, type: 3}
+  - {fileID: 21300008, guid: 8e0d24b8d196b89418f443b95e75c2bf, type: 3}
+  - {fileID: 21300010, guid: 8e0d24b8d196b89418f443b95e75c2bf, type: 3}
+  - {fileID: 21300012, guid: 8e0d24b8d196b89418f443b95e75c2bf, type: 3}
+  - {fileID: 21300014, guid: 8e0d24b8d196b89418f443b95e75c2bf, type: 3}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

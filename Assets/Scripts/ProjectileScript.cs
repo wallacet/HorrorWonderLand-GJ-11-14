@@ -6,6 +6,13 @@ public class ProjectileScript : MonoBehaviour {
 	public Vector2 velocity = new Vector2(0,0);
 	public float gravity = 0;
 	public float damage = 0;
+	public float width {
+		get {
+			return GetComponent<BoxCollider2D>().size.x;
+		}
+	}
+
+
 	
 	// Update is called once per frame
 	public void Update () {
