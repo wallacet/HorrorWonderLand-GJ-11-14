@@ -17,4 +17,14 @@ public class ZombieAIScript : AiScript {
 	{
 		base.Move ();
 	}
+
+	public override void Alerted ()
+	{
+		base.Alerted ();
+		if (isTriggered) 
+		{
+			this.Move();
+		}
+	}
+
 }
