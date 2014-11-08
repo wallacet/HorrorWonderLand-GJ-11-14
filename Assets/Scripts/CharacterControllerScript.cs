@@ -29,7 +29,7 @@ public class CharacterControllerScript : MonoBehaviour {
 			this.gameObject.transform.position = 
 				new Vector2 ((transform.position.x - speed * Time.deltaTime), transform.position.y);
 		} 
-		else if (Input.GetButton ("Jump")) {
+		if (Input.GetButton ("Jump")) {
 			if(!jumping){
 				rigidbody2D.AddForce(new Vector2(0, jumpHeight));
 				jumping = true;
