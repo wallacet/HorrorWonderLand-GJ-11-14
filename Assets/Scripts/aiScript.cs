@@ -3,6 +3,9 @@ using System.Collections;
 
 public class aiScript : MonoBehaviour {
 
+	private int speed;
+
+
 	// Use this for initialization
 	void Start () {
 	
@@ -12,4 +15,6 @@ public class aiScript : MonoBehaviour {
 	void Update () {
 	
 	}
+
+
 }
