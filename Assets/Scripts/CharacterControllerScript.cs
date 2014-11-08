@@ -4,6 +4,7 @@ using System.Collections;
 public class CharacterControllerScript : MonoBehaviour {
 	SpriteAnimationManagerScript manager;
 	public float speed = 2.0f;
+	public float jumpHeight = 5.0f;
 	// Use this for initialization
 	void Start () {
 		manager = GetComponent<SpriteAnimationManagerScript> ();
@@ -27,8 +28,9 @@ public class CharacterControllerScript : MonoBehaviour {
 				new Vector2 ((transform.position.x - speed * Time.deltaTime), transform.position.y);
 		} 
 		else if (Input.GetButton ("Jump")) {
+
 			this.gameObject.transform.position =
-				new Vector2 ((transform.position.x), transform.position.y + speed * Time.deltaTime);
+				new Vector2 ((transform.position.x), transform.position.y + jumpHeight * Time.deltaTime);
 		}
 	}
 }
