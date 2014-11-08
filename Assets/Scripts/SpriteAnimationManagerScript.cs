@@ -92,7 +92,7 @@ public class SpriteAnimationManagerScript : MonoBehaviour {
 			frameTimer = 0;
 			currentFrame = (currentFrame + 1) % currentAnim.sprites.Length;
 			if(currentFrame == 0 && !currentAnim.loop) {
-				Debug.LogWarning("check destory animations");
+				//Debug.LogWarning("check destory animations");
 				if(destroyAfterOneTimeAnimations){
 					Destroy(gameObject);
 				}else if(idleAfterOneTimeAnimations){
