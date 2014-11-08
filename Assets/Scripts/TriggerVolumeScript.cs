@@ -3,6 +3,9 @@ using System.Collections;
 
 public class TriggerVolumeScript : MonoBehaviour {
 
+	public bool isTriggered;
+	public Vector2 playerPosition;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -12,4 +15,5 @@ public class TriggerVolumeScript : MonoBehaviour {
 	void Update () {
 	
 	}
+
 }
