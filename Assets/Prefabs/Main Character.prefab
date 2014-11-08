@@ -49,7 +49,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -.141753808, y: -.283507645, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -154,19 +154,18 @@ MonoBehaviour:
   rate: 10
   loop: 1
   sprites:
-  - {fileID: 21300000, guid: dbe9271a654625a4bae33081f3ff189d, type: 3}
-  - {fileID: 21300002, guid: dbe9271a654625a4bae33081f3ff189d, type: 3}
-  - {fileID: 21300004, guid: dbe9271a654625a4bae33081f3ff189d, type: 3}
-  - {fileID: 21300006, guid: dbe9271a654625a4bae33081f3ff189d, type: 3}
-  - {fileID: 21300008, guid: dbe9271a654625a4bae33081f3ff189d, type: 3}
-  - {fileID: 21300010, guid: dbe9271a654625a4bae33081f3ff189d, type: 3}
-  - {fileID: 21300012, guid: dbe9271a654625a4bae33081f3ff189d, type: 3}
-  - {fileID: 21300014, guid: dbe9271a654625a4bae33081f3ff189d, type: 3}
-  - {fileID: 21300016, guid: dbe9271a654625a4bae33081f3ff189d, type: 3}
-  - {fileID: 21300018, guid: dbe9271a654625a4bae33081f3ff189d, type: 3}
-  - {fileID: 21300020, guid: dbe9271a654625a4bae33081f3ff189d, type: 3}
-  - {fileID: 21300022, guid: dbe9271a654625a4bae33081f3ff189d, type: 3}
-  - {fileID: 21300024, guid: dbe9271a654625a4bae33081f3ff189d, type: 3}
+  - {fileID: 21300000, guid: fa1ca37dcfff4ba4b9aca5a1016fe016, type: 3}
+  - {fileID: 21300002, guid: fa1ca37dcfff4ba4b9aca5a1016fe016, type: 3}
+  - {fileID: 21300004, guid: fa1ca37dcfff4ba4b9aca5a1016fe016, type: 3}
+  - {fileID: 21300006, guid: fa1ca37dcfff4ba4b9aca5a1016fe016, type: 3}
+  - {fileID: 21300008, guid: fa1ca37dcfff4ba4b9aca5a1016fe016, type: 3}
+  - {fileID: 21300010, guid: fa1ca37dcfff4ba4b9aca5a1016fe016, type: 3}
+  - {fileID: 21300012, guid: fa1ca37dcfff4ba4b9aca5a1016fe016, type: 3}
+  - {fileID: 21300014, guid: fa1ca37dcfff4ba4b9aca5a1016fe016, type: 3}
+  - {fileID: 21300016, guid: fa1ca37dcfff4ba4b9aca5a1016fe016, type: 3}
+  - {fileID: 21300018, guid: fa1ca37dcfff4ba4b9aca5a1016fe016, type: 3}
+  - {fileID: 21300020, guid: fa1ca37dcfff4ba4b9aca5a1016fe016, type: 3}
+  - {fileID: 21300022, guid: fa1ca37dcfff4ba4b9aca5a1016fe016, type: 3}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -195,6 +194,7 @@ MonoBehaviour:
   speed: 5
   jumpHeight: 400
   jumping: 0
+  facingLeft: 0
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -221,18 +221,18 @@ MonoBehaviour:
   rate: 10
   loop: 1
   sprites:
-  - {fileID: 21300028, guid: e5df84225d4a9e444b507bafeeb9d742, type: 3}
-  - {fileID: 21300030, guid: e5df84225d4a9e444b507bafeeb9d742, type: 3}
-  - {fileID: 21300032, guid: e5df84225d4a9e444b507bafeeb9d742, type: 3}
-  - {fileID: 21300034, guid: e5df84225d4a9e444b507bafeeb9d742, type: 3}
-  - {fileID: 21300036, guid: e5df84225d4a9e444b507bafeeb9d742, type: 3}
-  - {fileID: 21300038, guid: e5df84225d4a9e444b507bafeeb9d742, type: 3}
-  - {fileID: 21300040, guid: e5df84225d4a9e444b507bafeeb9d742, type: 3}
-  - {fileID: 21300042, guid: e5df84225d4a9e444b507bafeeb9d742, type: 3}
-  - {fileID: 21300044, guid: e5df84225d4a9e444b507bafeeb9d742, type: 3}
-  - {fileID: 21300046, guid: e5df84225d4a9e444b507bafeeb9d742, type: 3}
-  - {fileID: 21300048, guid: e5df84225d4a9e444b507bafeeb9d742, type: 3}
-  - {fileID: 21300024, guid: e5df84225d4a9e444b507bafeeb9d742, type: 3}
+  - {fileID: 21300000, guid: abb42b2b9736ced479d6880aee7b548d, type: 3}
+  - {fileID: 21300002, guid: abb42b2b9736ced479d6880aee7b548d, type: 3}
+  - {fileID: 21300004, guid: abb42b2b9736ced479d6880aee7b548d, type: 3}
+  - {fileID: 21300006, guid: abb42b2b9736ced479d6880aee7b548d, type: 3}
+  - {fileID: 21300008, guid: abb42b2b9736ced479d6880aee7b548d, type: 3}
+  - {fileID: 21300010, guid: abb42b2b9736ced479d6880aee7b548d, type: 3}
+  - {fileID: 21300012, guid: abb42b2b9736ced479d6880aee7b548d, type: 3}
+  - {fileID: 21300014, guid: abb42b2b9736ced479d6880aee7b548d, type: 3}
+  - {fileID: 21300016, guid: abb42b2b9736ced479d6880aee7b548d, type: 3}
+  - {fileID: 21300018, guid: abb42b2b9736ced479d6880aee7b548d, type: 3}
+  - {fileID: 21300020, guid: abb42b2b9736ced479d6880aee7b548d, type: 3}
+  - {fileID: 21300022, guid: abb42b2b9736ced479d6880aee7b548d, type: 3}
 --- !u!124 &12400000
 Behaviour:
   m_ObjectHideFlags: 1

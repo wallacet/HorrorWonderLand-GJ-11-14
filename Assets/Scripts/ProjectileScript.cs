@@ -22,7 +22,7 @@ public class ProjectileScript : MonoBehaviour {
 	}
 
 	public void OnCollisionEnter2D(Collision2D other) {
-		if(other.gameObject.tag == "Hitable"){
+		if(other.gameObject.GetComponent<HealthScript>()){
 			other.gameObject.GetComponent<HealthScript>().Damage(damage);
 		}
 		Destroy(gameObject);

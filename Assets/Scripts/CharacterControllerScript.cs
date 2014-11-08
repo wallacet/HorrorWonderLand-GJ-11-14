@@ -30,7 +30,7 @@ public class CharacterControllerScript : MonoBehaviour {
 			facingLeft = false;
 		} 
 		else if(Input.GetButtonUp("Right")){
-			manager.PauseAnimation(true);
+			manager.PlayAnimation("Idle");
 		}
 		else if (Input.GetButton ("Left")) {
 			this.gameObject.transform.position = 
@@ -41,7 +41,7 @@ public class CharacterControllerScript : MonoBehaviour {
 			facingLeft = true;
 		} 
 		else if(Input.GetButtonUp("Left")){
-			manager.PauseAnimation(true);
+			manager.PlayAnimation("Idle");
 		}
 		if (Input.GetButton ("Jump")) {
 			if (Input.GetButton ("Jump")) {
