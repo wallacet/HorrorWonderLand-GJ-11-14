@@ -14,6 +14,9 @@ public class PlayerWeaponScript : MonoBehaviour {
 	}
 
 	public void EquipWeapon(WeaponScript weapon) {
+		if(currentWeapon != null)
+			Destroy(currentWeapon);
+
 		currentWeapon = gameObject.AddComponent(weapon.GetType().ToString()) as WeaponScript;
 	}
 }

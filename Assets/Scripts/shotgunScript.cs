@@ -16,5 +16,6 @@ public class ShotgunScript : WeaponScript {
 	public override void Use ()
 	{
 		base.Use ();
+		Debug.Log("Shotgun Bang!");
 	}
 }
