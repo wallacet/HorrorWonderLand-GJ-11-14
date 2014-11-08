@@ -36,7 +36,7 @@ public class CharacterControllerScript : MonoBehaviour {
 		else if(Input.GetButtonUp("Left")){
 			manager.PauseAnimation(true);
 		}
-		else if (Input.GetButton ("Jump")) {
+		if (Input.GetButton ("Jump")) {
 			if (Input.GetButton ("Jump")) {
 				if(!jumping){
 					rigidbody2D.AddForce(new Vector2(0, jumpHeight));
