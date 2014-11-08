@@ -6,8 +6,6 @@ public class ZombieAIScript : AiScript {
 	// Use this for initialization
 	public override void Start () {
 		base.Start ();
-		speed = 2;
-		//triggerVolume = gameObject.GetComponent<TriggerVolumeScript>;
 	}
 	
 	// Update is called once per frame
