@@ -37,9 +37,11 @@ public class CharacterControllerScript : MonoBehaviour {
 			manager.PauseAnimation(true);
 		}
 		else if (Input.GetButton ("Jump")) {
-			if(!jumping){
-				rigidbody2D.AddForce(new Vector2(0, jumpHeight));
-				jumping = true;
+			if (Input.GetButton ("Jump")) {
+				if(!jumping){
+					rigidbody2D.AddForce(new Vector2(0, jumpHeight));
+					jumping = true;
+				}
 			}
 		}
 	}
