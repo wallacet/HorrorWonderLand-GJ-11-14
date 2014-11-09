@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 59ae7976d908cc44890f877a947fd103
+guid: b9f6ad8a1d3636948b4c0df2f287f6c3
 TextureImporter:
   fileIDToRecycleName:
     21300000: zombie move L_0
@@ -52,27 +52,27 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 160
+        width: 161
         height: 200
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: zombie move L_1
       rect:
         serializedVersion: 2
-        x: 160
+        x: 161
         y: 0
-        width: 160
+        width: 161
         height: 200
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: zombie move L_2
       rect:
         serializedVersion: 2
-        x: 320
+        x: 322
         y: 0
-        width: 160
+        width: 161
         height: 200
       alignment: 0
       pivot: {x: .5, y: .5}
@@ -80,9 +80,9 @@ TextureImporter:
     - name: zombie move L_3
       rect:
         serializedVersion: 2
-        x: 480
+        x: 481
         y: 0
-        width: 160
+        width: 161
         height: 200
       alignment: 0
       pivot: {x: .5, y: .5}

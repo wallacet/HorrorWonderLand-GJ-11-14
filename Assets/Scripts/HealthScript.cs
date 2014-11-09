@@ -13,6 +13,8 @@ public class HealthScript : MonoBehaviour {
 		if(LayerMask.NameToLayer("Enemy") == gameObject.layer)
 			GameObject.Find("Main Character").GetComponent<EnemyCounterScript>().enemyCount--;
 		gameObject.GetComponent<SpriteAnimationManagerScript>().PlayAnimation("Death");
+		foreach(BoxCollider2D box in gameObject.GetComponents<BoxCollider2D>())
+			box.enabled=false;
 	}
 	
 	// Update is called once per frame

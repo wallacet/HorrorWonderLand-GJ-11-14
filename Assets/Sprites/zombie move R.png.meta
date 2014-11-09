@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7fffbbcd7f8992e4195b5424a486633c
+guid: 571e3dbfc14c2c140b02beabc81577e0
 TextureImporter:
   fileIDToRecycleName:
     21300000: zombie move R_0
@@ -80,9 +80,9 @@ TextureImporter:
     - name: zombie move R_3
       rect:
         serializedVersion: 2
-        x: 482
+        x: 481
         y: 0
-        width: 160
+        width: 161
         height: 200
       alignment: 0
       pivot: {x: .5, y: .5}
