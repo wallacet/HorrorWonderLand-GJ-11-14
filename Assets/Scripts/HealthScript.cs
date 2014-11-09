@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(SpriteAnimationManagerScript))]
 public class HealthScript : MonoBehaviour {
 	public float health = 10.0f;
 
@@ -11,7 +12,7 @@ public class HealthScript : MonoBehaviour {
 	public virtual void Die() {
 		if(LayerMask.NameToLayer("Enemy") == gameObject.layer)
 			GameObject.Find("Main Character").GetComponent<EnemyCounterScript>().enemyCount--;
-		Destroy(gameObject);
+		gameObject.GetComponent<SpriteAnimationManagerScript>().PlayAnimation("Death");
 	}
 	
 	// Update is called once per frame
