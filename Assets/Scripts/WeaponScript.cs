@@ -7,6 +7,7 @@ public class WeaponScript : MonoBehaviour {
 	public int damage;
 	public float recoilAmount = 0;
 	public float recoilLength = 0;
+	public string weaponName = "None";
 
 	// Use this for initialization
 	public virtual void Start () {

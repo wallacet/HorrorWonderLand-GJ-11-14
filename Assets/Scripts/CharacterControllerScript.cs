@@ -13,6 +13,21 @@ public class CharacterControllerScript : MonoBehaviour {
 	private int forceFrameDelay = 10;
 	private int currentFramesDelay = 0;
 
+	private bool grounded {
+		get {
+			RaycastHit2D hit = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y),
+			                  -Vector2.up,
+			                  gameObject.GetComponent<BoxCollider2D>().size.y/2.0f + 0.05f, LayerMask.GetMask("Ground", "Platform"));
+
+			if(hit.collider != null) {
+				return true;
+			}
+			else {
+				return false;
+			}
+		}
+	}
+
 	// Use this for initialization
 	void Start () {
 		manager = GetComponent<SpriteAnimationManagerScript> ();
@@ -43,12 +58,10 @@ public class CharacterControllerScript : MonoBehaviour {
 		else if(Input.GetButtonUp("Left")){
 			manager.PlayAnimation("Idle");
 		}
-		if (Input.GetButton ("Jump")) {
-			if (Input.GetButton ("Jump")) {
-				if(!jumping && currentFramesDelay == 0){
-					applyForce = true;
-					jumping = true;
-				}
+		if (Input.GetButton ("Jump") && grounded) {
+			if(!jumping && currentFramesDelay == 0){
+				applyForce = true;
+				jumping = true;
 			}
 		}
 	}

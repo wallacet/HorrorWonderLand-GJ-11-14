@@ -22,5 +22,6 @@ public class PlayerWeaponScript : MonoBehaviour {
 		currentWeapon.damage = weapon.damage;
 		currentWeapon.recoilAmount = weapon.recoilAmount;
 		currentWeapon.recoilLength = weapon.recoilLength;
+		currentWeapon.weaponName = weapon.weaponName;
 	}
 }
