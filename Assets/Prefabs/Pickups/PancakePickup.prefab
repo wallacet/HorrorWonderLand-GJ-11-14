@@ -18,7 +18,7 @@ GameObject:
   - 61: {fileID: 6100002}
   - 114: {fileID: 11400002}
   - 114: {fileID: 11400010}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: PancakePickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32,7 +32,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 44.0948181, y: 6.16845942, z: 0}
+  m_LocalPosition: {x: 44.1695328, y: 5.75753021, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -102,6 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 30
+  dead: 0
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1

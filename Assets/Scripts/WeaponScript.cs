@@ -47,6 +47,9 @@ public class WeaponScript : MonoBehaviour {
 		CameraShakeScript tmp = gameObject.GetComponent<CameraShakeScript>();
 		tmp.shake = recoilLength;
 		tmp.shakeAmount = recoilAmount;
+
+		ScreenFlsahScript tmp2 = gameObject.GetComponent<ScreenFlsahScript>();
+		tmp2.flashTime = recoilLength;
 	}
 
 }

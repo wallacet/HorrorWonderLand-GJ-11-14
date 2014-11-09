@@ -63,7 +63,7 @@ TextureImporter:
         width: 150
         height: 175
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: guy running left_GUN_1
       rect:
@@ -73,7 +73,7 @@ TextureImporter:
         width: 150
         height: 175
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: guy running left_GUN_2
       rect:
@@ -83,7 +83,7 @@ TextureImporter:
         width: 150
         height: 175
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: guy running left_GUN_3
       rect:
@@ -93,7 +93,7 @@ TextureImporter:
         width: 150
         height: 175
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: guy running left_GUN_4
       rect:
@@ -103,7 +103,7 @@ TextureImporter:
         width: 150
         height: 175
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: guy running left_GUN_5
       rect:
@@ -113,17 +113,17 @@ TextureImporter:
         width: 150
         height: 175
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: guy running left_GUN_6
       rect:
         serializedVersion: 2
-        x: 900
+        x: 898
         y: 0
-        width: 150
+        width: 139
         height: 175
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: guy running left_GUN_7
       rect:
@@ -133,24 +133,24 @@ TextureImporter:
         width: 150
         height: 175
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: guy running left_GUN_8
       rect:
         serializedVersion: 2
-        x: 1200
+        x: 1202
         y: 0
-        width: 150
+        width: 140
         height: 175
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: guy running left_GUN_9
       rect:
         serializedVersion: 2
-        x: 1348
+        x: 1342
         y: 0
-        width: 152
+        width: 149
         height: 175
       alignment: 0
       pivot: {x: .5, y: .5}

@@ -15,9 +15,12 @@ public class CharacterControllerScript : MonoBehaviour {
 
 	private bool grounded {
 		get {
-			RaycastHit2D hit = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y),
-			                  -Vector2.up,
-			                  gameObject.GetComponent<BoxCollider2D>().size.y/2.0f + 0.05f, LayerMask.GetMask("Ground", "Platform"));
+			RaycastHit2D hit = Physics2D.BoxCast(new Vector2(transform.position.x, transform.position.y),
+			                                     gameObject.GetComponent<BoxCollider2D>().size,
+			                                     0,
+			                                     -Vector2.up,
+			                                     gameObject.GetComponent<BoxCollider2D>().size.y/2.0f + 0.1f,
+			                                     LayerMask.GetMask("Ground", "Platform", "Box"));
 
 			if(hit.collider != null) {
 				return true;
@@ -77,7 +80,7 @@ public class CharacterControllerScript : MonoBehaviour {
 	}
 
 	public void OnCollisionEnter2D(Collision2D other) {
-		if(other.gameObject.tag == "Ground" || other.gameObject.tag == "Platform") {
+		if(other.gameObject.tag == "Ground" || other.gameObject.tag == "Platform" || other.gameObject.layer == LayerMask.NameToLayer("Box")) {
 			if(collider2D.bounds.min.y > other.collider.bounds.max.y) {
 				jumping = false;
 			}
