@@ -26,6 +26,8 @@ public class ZombieAIScript : AiScript {
 		if(attackTimer < attackCooldown)
 			attackTimer += Time.deltaTime;
 
+		Debug.Log(attackTimer);
+
 		Alerted ();
 	}
 
@@ -49,7 +51,9 @@ public class ZombieAIScript : AiScript {
 	}
 
 	private void AttackPlayer() {
-		if(attackTimer < attackCooldown) {
+		Debug.Log("Attacking");
+		if(attackTimer > attackCooldown) {
+			Debug.Log("Dealing damage.");
 			player.GetComponent<HealthScript>().Damage(5);
 			attackTimer = 0;
 		}
