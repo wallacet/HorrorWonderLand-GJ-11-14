@@ -6,12 +6,15 @@ public class ZombieAIScript : AiScript {
 	private GameObject player;
 	private SpriteAnimationManagerScript sams;
 	public float floatHeight = 700.0f;
+	private AudioSource soundEffect;
+	private bool audioPlayed = false;
 
 	// Use this for initialization
 	public override void Start () {
 		base.Start ();
 		player = GameObject.Find("Main Character");
 		sams = gameObject.GetComponent<SpriteAnimationManagerScript>();
+		soundEffect = gameObject.GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -39,6 +42,11 @@ public class ZombieAIScript : AiScript {
 		base.Alerted ();
 		if (isTriggered) 
 		{
+			if(audioPlayed == false)
+			{
+				audioPlayed = true;
+				soundEffect.Play();
+			}
 			this.Move();
 		}
 	}
