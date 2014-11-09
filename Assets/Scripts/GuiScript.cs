@@ -8,6 +8,7 @@ public class GuiScript : MonoBehaviour {
 		
 		GUI.Label(new Rect(0,20,200,20), "Time: " + Time.realtimeSinceStartup);
 		GUI.Label(new Rect(0,40,200,20), "Enemies: " + gameObject.GetComponent<EnemyCounterScript>().enemyCount);
+		GUI.Label(new Rect(0,60,200,20), "Health: " + gameObject.GetComponent<HealthScript>().health);
 
 		if(GUI.Button(new Rect(200,0,100,20), "Reload Level"))
 			Application.LoadLevel(Application.loadedLevel);

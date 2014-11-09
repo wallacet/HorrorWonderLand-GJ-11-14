@@ -42,7 +42,8 @@ public class ZombieAIScript : AiScript {
 			}
 		}
 		else {
-			AttackPlayer();
+			if((player.transform.position - transform.position).magnitude < player.GetComponent<BoxCollider2D>().size.x + 0.2f)
+				AttackPlayer();
 		}
 
 	}
