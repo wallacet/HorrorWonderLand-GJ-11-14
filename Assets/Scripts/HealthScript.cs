@@ -9,6 +9,8 @@ public class HealthScript : MonoBehaviour {
 	}
 
 	public virtual void Die() {
+		if(LayerMask.NameToLayer("Enemy") == gameObject.layer)
+			GameObject.Find("Main Character").GetComponent<EnemyCounterScript>().enemyCount--;
 		Destroy(gameObject);
 	}
 	

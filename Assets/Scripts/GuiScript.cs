@@ -7,5 +7,6 @@ public class GuiScript : MonoBehaviour {
 			GUI.Label(new Rect(0,0,200,20), "Weapon: " + gameObject.GetComponent<WeaponScript>().weaponName);
 		
 		GUI.Label(new Rect(0,20,200,20), "Time: " + Time.realtimeSinceStartup);
+		GUI.Label(new Rect(0,40,200,20), "Enemies: " + gameObject.GetComponent<EnemyCounterScript>().enemyCount);
 	}
 }
