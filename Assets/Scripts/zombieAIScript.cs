@@ -3,11 +3,14 @@ using System.Collections;
 
 public class ZombieAIScript : AiScript {
 
-	private Vector2 position;
+	private GameObject player;
+	private SpriteAnimationManagerScript sams;
 
 	// Use this for initialization
 	public override void Start () {
 		base.Start ();
+		player = GameObject.Find("Main Character");
+		sams = gameObject.GetComponent<SpriteAnimationManagerScript>();
 	}
 	
 	// Update is called once per frame
@@ -18,22 +21,15 @@ public class ZombieAIScript : AiScript {
 
 	public override void Move ()
 	{
-		base.Move ();
-		Debug.Log ("zombie move");
-		Debug.Log ("position: " + this.gameObject.transform.position);
-		Debug.Log ("move target: " + moveTarget);
-		if(moveTarget.x < this.gameObject.transform.position.x)
-		{
-			this.gameObject.transform.position = new Vector2(
-				( this.gameObject.transform.position.x - this.speed * Time.deltaTime), 
-				this.gameObject.transform.position.y);
+		if(player.transform.position.x > gameObject.transform.position.x) {
+			transform.position += new Vector3(speed * Time.deltaTime,0,0);
+			sams.PlayAnimation("WalkRight");
 		}
-		else
-		{
-			this.gameObject.transform.position = new Vector2(
-				( this.gameObject.transform.position.x + this.speed * Time.deltaTime), 
-				this.gameObject.transform.position.y);
+		else {
+			transform.position -= new Vector3(speed * Time.deltaTime,0,0);
+			sams.PlayAnimation("WalkLeft");
 		}
+
 	}
 
 	public override void Alerted ()
@@ -42,7 +38,6 @@ public class ZombieAIScript : AiScript {
 		base.Alerted ();
 		if (isTriggered) 
 		{
-			Debug.Log ("trigger is ture");
 			this.Move();
 		}
 	}
