@@ -12,4 +12,6 @@ public class ZombieScript : EnemyScript {
 	public override void Update () {
 		base.Update ();
 	}
+
+
 }

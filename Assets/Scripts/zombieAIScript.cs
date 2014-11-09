@@ -5,6 +5,7 @@ public class ZombieAIScript : AiScript {
 
 	private GameObject player;
 	private SpriteAnimationManagerScript sams;
+	public float floatHeight = 700.0f;
 
 	// Use this for initialization
 	public override void Start () {
@@ -39,6 +40,12 @@ public class ZombieAIScript : AiScript {
 		if (isTriggered) 
 		{
 			this.Move();
+		}
+	}
+
+	public void OnTriggerEnter2D(Collider2D other){
+		if (other.gameObject.tag == "Bumper") {
+			rigidbody2D.AddForce (new Vector2 (0, floatHeight * 1.5f));
 		}
 	}
 
