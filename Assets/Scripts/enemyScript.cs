@@ -8,7 +8,7 @@ public abstract class EnemyScript : MonoBehaviour {
 
 	// Use this for initialization
 	public virtual void Start () {
-	
+		GameObject.Find("Main Character").GetComponent<EnemyCounterScript>().enemyCount++;
 	}
 	
 	// Update is called once per frame
