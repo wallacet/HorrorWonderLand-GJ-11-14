@@ -17,6 +17,7 @@ GameObject:
   - 114: {fileID: 11400010}
   - 114: {fileID: 11400008}
   - 114: {fileID: 11400006}
+  - 114: {fileID: 11400012}
   m_Layer: 12
   m_Name: Zombie
   m_TagString: Untagged
@@ -60,7 +61,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: 3.20000005, y: 1.84000003}
+  m_Size: {x: 1, y: 1.84000003}
   m_Center: {x: 0, y: 0}
 --- !u!114 &11400000
 MonoBehaviour:
@@ -99,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  dead: 0
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -151,6 +153,25 @@ MonoBehaviour:
   idleAfterOneTimeAnimations: 0
   destroyAfterOneTimeAnimations: 0
   playOnAwake: 1
+--- !u!114 &11400012
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e287bb4e34132d44bb444ed161867ee2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: Death
+  rate: 10
+  loop: 0
+  sprites:
+  - {fileID: 21300004, guid: c4ab877befb9d1b41b8ca7d67ac8507f, type: 3}
+  - {fileID: 21300006, guid: c4ab877befb9d1b41b8ca7d67ac8507f, type: 3}
+  - {fileID: 21300008, guid: c4ab877befb9d1b41b8ca7d67ac8507f, type: 3}
+  - {fileID: 21300010, guid: c4ab877befb9d1b41b8ca7d67ac8507f, type: 3}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -171,7 +192,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d5d3cd443e9eb3543a53347cb01c8865, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b9f6ad8a1d3636948b4c0df2f287f6c3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
