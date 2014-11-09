@@ -3287,7 +3287,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
 --- !u!114 &521747894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3976,7 +3976,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: cc5fa35e5a57edc4f9bbbcee283b17c0, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: .899999976
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -4542,7 +4542,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 8
 --- !u!82 &674948425
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4886,7 +4886,7 @@ Transform:
   - {fileID: 1863486891}
   - {fileID: 1127324475}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
 --- !u!1 &728504426
 GameObject:
   m_ObjectHideFlags: 0
@@ -6404,7 +6404,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!114 &963913311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9046,7 +9046,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
 --- !u!82 &1349378327
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9536,7 +9536,7 @@ Transform:
   m_LocalScale: {x: .775912166, y: 1.08627713, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
 --- !u!114 &1438656620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11662,7 +11662,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
 --- !u!114 &1862250239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13014,6 +13014,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 29
       objectReference: {fileID: 0}
+    - target: {fileID: 8200000, guid: 123fc0012b99f4744aca9c3d696c6eb6, type: 2}
+      propertyPath: m_Volume
+      value: .899999976
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 123fc0012b99f4744aca9c3d696c6eb6, type: 2}
   m_RootGameObject: {fileID: 592768812}
@@ -13199,7 +13203,7 @@ Transform:
   m_LocalScale: {x: 2.45847487, y: 2.45847321, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 2
 --- !u!1 &2113525851
 GameObject:
   m_ObjectHideFlags: 0
