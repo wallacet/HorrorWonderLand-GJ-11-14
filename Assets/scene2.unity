@@ -69729,7 +69729,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdaf567b162360940a06249aa6b40b3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Zombie: {fileID: 0}
+  Zombie: {fileID: 100000, guid: 961a38edb1cc9d8449af6433676ca9c5, type: 2}
 --- !u!4 &1961869860
 Transform:
   m_ObjectHideFlags: 0

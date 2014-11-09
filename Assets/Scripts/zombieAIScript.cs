@@ -9,6 +9,9 @@ public class ZombieAIScript : AiScript {
 	private AudioSource soundEffect;
 	private bool audioPlayed = false;
 
+	private float attackCooldown = 2.0f;
+	private float attackTimer = 0;
+
 	// Use this for initialization
 	public override void Start () {
 		base.Start ();
@@ -20,20 +23,35 @@ public class ZombieAIScript : AiScript {
 	// Update is called once per frame
 	public override void Update () {
 		base.Update ();
+		if(attackTimer < attackCooldown)
+			attackTimer += Time.deltaTime;
+
 		Alerted ();
 	}
 
 	public override void Move ()
 	{
-		if(player.transform.position.x > gameObject.transform.position.x) {
-			transform.position += new Vector3(speed * Time.deltaTime,0,0);
-			sams.PlayAnimation("WalkRight");
+		if(Mathf.Abs(player.transform.position.x - gameObject.transform.position.x) > player.GetComponent<BoxCollider2D>().size.x) {
+			if(player.transform.position.x > gameObject.transform.position.x) {
+				transform.position += new Vector3(speed * Time.deltaTime,0,0);
+				sams.PlayAnimation("WalkRight");
+			}
+			else {
+				transform.position -= new Vector3(speed * Time.deltaTime,0,0);
+				sams.PlayAnimation("WalkLeft");
+			}
 		}
 		else {
-			transform.position -= new Vector3(speed * Time.deltaTime,0,0);
-			sams.PlayAnimation("WalkLeft");
+			AttackPlayer();
 		}
 
+	}
+
+	private void AttackPlayer() {
+		if(attackTimer < attackCooldown) {
+			player.GetComponent<HealthScript>().Damage(5);
+			attackTimer = 0;
+		}
 	}
 
 	public override void Alerted ()
