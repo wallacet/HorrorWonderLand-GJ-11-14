@@ -3,7 +3,7 @@ using System.Collections;
 
 public class TriggerVolumeScript : MonoBehaviour {
 
-	public bool isTriggered;
+	public bool isTriggered = false;
 	public Vector2 playerPosition;
 
 
@@ -18,16 +18,10 @@ public class TriggerVolumeScript : MonoBehaviour {
 	}
 
 	public void OnTriggerEnter2D(Collider2D other) {
-		Debug.Log ("colliding");
 		if (other.gameObject.tag == "Player") 
 		{
-			Debug.Log ("colliding with player");
 			playerPosition = other.gameObject.transform.position;
 			isTriggered = true;
-		} 
-		else 
-		{
-			isTriggered = false;
 		}
 	}
 
