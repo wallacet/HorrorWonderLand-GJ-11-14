@@ -16,8 +16,12 @@ public class HealthScript : MonoBehaviour {
 			GetComponent<AiScript>().enabled = false;
 		}
 		else {
-			foreach(BoxCollider2D box in gameObject.GetComponents<BoxCollider2D>())
-				box.enabled=false;
+			if(gameObject.tag != "Player") {
+				foreach(BoxCollider2D box in gameObject.GetComponents<BoxCollider2D>())
+					box.enabled=false;
+			}
+			else
+				Application.LoadLevel(Application.loadedLevel);
 		}
 
 		gameObject.GetComponent<SpriteAnimationManagerScript>().PlayAnimation("Death");

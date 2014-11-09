@@ -14,7 +14,7 @@ public class KillBoxScript : MonoBehaviour {
 	}
 
 	public void OnTriggerEnter2D (Collider2D other) {
-		if(other.gameObject.tag == "Player") {
+		if(other.gameObject.tag == "Player" || other.gameObject.layer == LayerMask.NameToLayer("Dead")) {
 			Application.LoadLevel(Application.loadedLevel);
 		}
 	}

@@ -17,4 +17,9 @@ public class GuiScript : MonoBehaviour {
 		if(GUI.Button(new Rect(200,40,100,20), "Level 2"))
 			Application.LoadLevel(1);
 	}
+
+	public void Update() {
+		if(Input.GetKey(KeyCode.Escape))
+			Application.Quit();
+	}
 }
