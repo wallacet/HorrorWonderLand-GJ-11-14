@@ -141,6 +141,7 @@ GameObject:
   - 114: {fileID: 18122313}
   - 114: {fileID: 18122312}
   - 114: {fileID: 18122311}
+  - 114: {fileID: 18122321}
   m_Layer: 12
   m_Name: Zombie
   m_TagString: Untagged
@@ -229,7 +230,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: 3.20000005, y: 1.84000003}
+  m_Size: {x: 1, y: 1.84000003}
   m_Center: {x: 0, y: 0}
 --- !u!114 &18122316
 MonoBehaviour:
@@ -244,6 +245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  dead: 0
 --- !u!114 &18122317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,7 +294,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d5d3cd443e9eb3543a53347cb01c8865, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b9f6ad8a1d3636948b4c0df2f287f6c3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &18122320
 Transform:
@@ -305,7 +307,27 @@ Transform:
   m_LocalScale: {x: .5, y: .699999988, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
+--- !u!114 &18122321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400012, guid: 961a38edb1cc9d8449af6433676ca9c5,
+    type: 2}
+  m_PrefabInternal: {fileID: 1429732307}
+  m_GameObject: {fileID: 18122310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e287bb4e34132d44bb444ed161867ee2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: Death
+  rate: 10
+  loop: 0
+  sprites:
+  - {fileID: 21300004, guid: c4ab877befb9d1b41b8ca7d67ac8507f, type: 3}
+  - {fileID: 21300006, guid: c4ab877befb9d1b41b8ca7d67ac8507f, type: 3}
+  - {fileID: 21300008, guid: c4ab877befb9d1b41b8ca7d67ac8507f, type: 3}
+  - {fileID: 21300010, guid: c4ab877befb9d1b41b8ca7d67ac8507f, type: 3}
 --- !u!1 &37993355
 GameObject:
   m_ObjectHideFlags: 0
@@ -581,7 +603,7 @@ Transform:
   m_LocalScale: {x: 2, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
 --- !u!1 &55082006
 GameObject:
   m_ObjectHideFlags: 0
@@ -843,8 +865,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 112918400}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.61272907, y: 13.6902304, z: 0}
-  m_LocalScale: {x: .797413826, y: .797414124, z: 1}
+  m_LocalPosition: {x: -.0111331828, y: 19.3686352, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 259916293}
   - {fileID: 393683697}
@@ -852,8 +874,9 @@ Transform:
   - {fileID: 39255301}
   - {fileID: 497228540}
   - {fileID: 1447558766}
-  m_Father: {fileID: 0}
-  m_RootOrder: 20
+  - {fileID: 1443187543}
+  m_Father: {fileID: 1456080521}
+  m_RootOrder: 6
 --- !u!212 &112918402
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1482,7 +1505,7 @@ Transform:
   m_LocalScale: {x: 2, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
 --- !u!1 &249763278
 GameObject:
   m_ObjectHideFlags: 0
@@ -1670,7 +1693,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 961a38edb1cc9d8449af6433676ca9c5, type: 2}
       propertyPath: m_RootOrder
-      value: 18
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 961a38edb1cc9d8449af6433676ca9c5, type: 2}
       propertyPath: triggerVolume
@@ -2340,7 +2363,7 @@ Transform:
   m_LocalScale: {x: 2, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
 --- !u!1001 &423094906
 Prefab:
   m_ObjectHideFlags: 0
@@ -2534,18 +2557,18 @@ MonoBehaviour:
   rate: 10
   loop: 1
   sprites:
-  - {fileID: 21300000, guid: fa1ca37dcfff4ba4b9aca5a1016fe016, type: 3}
-  - {fileID: 21300002, guid: fa1ca37dcfff4ba4b9aca5a1016fe016, type: 3}
-  - {fileID: 21300004, guid: fa1ca37dcfff4ba4b9aca5a1016fe016, type: 3}
-  - {fileID: 21300006, guid: fa1ca37dcfff4ba4b9aca5a1016fe016, type: 3}
-  - {fileID: 21300008, guid: fa1ca37dcfff4ba4b9aca5a1016fe016, type: 3}
-  - {fileID: 21300010, guid: fa1ca37dcfff4ba4b9aca5a1016fe016, type: 3}
-  - {fileID: 21300012, guid: fa1ca37dcfff4ba4b9aca5a1016fe016, type: 3}
-  - {fileID: 21300014, guid: fa1ca37dcfff4ba4b9aca5a1016fe016, type: 3}
-  - {fileID: 21300016, guid: fa1ca37dcfff4ba4b9aca5a1016fe016, type: 3}
-  - {fileID: 21300018, guid: fa1ca37dcfff4ba4b9aca5a1016fe016, type: 3}
-  - {fileID: 21300020, guid: fa1ca37dcfff4ba4b9aca5a1016fe016, type: 3}
-  - {fileID: 21300022, guid: fa1ca37dcfff4ba4b9aca5a1016fe016, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &440266995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2617,18 +2640,18 @@ MonoBehaviour:
   rate: 10
   loop: 1
   sprites:
-  - {fileID: 21300000, guid: abb42b2b9736ced479d6880aee7b548d, type: 3}
-  - {fileID: 21300002, guid: abb42b2b9736ced479d6880aee7b548d, type: 3}
-  - {fileID: 21300004, guid: abb42b2b9736ced479d6880aee7b548d, type: 3}
-  - {fileID: 21300006, guid: abb42b2b9736ced479d6880aee7b548d, type: 3}
-  - {fileID: 21300008, guid: abb42b2b9736ced479d6880aee7b548d, type: 3}
-  - {fileID: 21300010, guid: abb42b2b9736ced479d6880aee7b548d, type: 3}
-  - {fileID: 21300012, guid: abb42b2b9736ced479d6880aee7b548d, type: 3}
-  - {fileID: 21300014, guid: abb42b2b9736ced479d6880aee7b548d, type: 3}
-  - {fileID: 21300016, guid: abb42b2b9736ced479d6880aee7b548d, type: 3}
-  - {fileID: 21300018, guid: abb42b2b9736ced479d6880aee7b548d, type: 3}
-  - {fileID: 21300020, guid: abb42b2b9736ced479d6880aee7b548d, type: 3}
-  - {fileID: 21300022, guid: abb42b2b9736ced479d6880aee7b548d, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &440267000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2903,6 +2926,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 30
+  dead: 0
 --- !u!114 &521747890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3201,6 +3225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 30
+  dead: 0
 --- !u!114 &538549134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3416,7 +3441,7 @@ Transform:
   m_LocalScale: {x: 2, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
 --- !u!1 &568522579
 GameObject:
   m_ObjectHideFlags: 0
@@ -3528,7 +3553,7 @@ Transform:
   m_LocalScale: {x: 2, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
 --- !u!1 &584432511
 GameObject:
   m_ObjectHideFlags: 0
@@ -5085,6 +5110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 30
+  dead: 0
 --- !u!114 &963913313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6214,7 +6240,7 @@ Transform:
   m_LocalScale: {x: 2, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
 --- !u!1 &1223352462
 GameObject:
   m_ObjectHideFlags: 0
@@ -7138,7 +7164,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 961a38edb1cc9d8449af6433676ca9c5, type: 2}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 961a38edb1cc9d8449af6433676ca9c5, type: 2}
       propertyPath: triggerVolume
@@ -7302,7 +7328,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 961a38edb1cc9d8449af6433676ca9c5, type: 2}
       propertyPath: m_RootOrder
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 961a38edb1cc9d8449af6433676ca9c5, type: 2}
       propertyPath: triggerVolume
@@ -7338,6 +7364,7 @@ GameObject:
   - 114: {fileID: 1438656624}
   - 114: {fileID: 1438656623}
   - 114: {fileID: 1438656622}
+  - 114: {fileID: 1438656626}
   m_Layer: 12
   m_Name: Zombie
   m_TagString: Untagged
@@ -7393,7 +7420,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d5d3cd443e9eb3543a53347cb01c8865, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b9f6ad8a1d3636948b4c0df2f287f6c3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1438656619
 Transform:
@@ -7420,6 +7447,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  dead: 0
 --- !u!61 &1438656621
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7430,7 +7458,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: 3.20000005, y: 1.84000003}
+  m_Size: {x: 1, y: 1.84000003}
   m_Center: {x: 0, y: 0}
 --- !u!114 &1438656622
 MonoBehaviour:
@@ -7503,6 +7531,26 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+--- !u!114 &1438656626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400012, guid: 961a38edb1cc9d8449af6433676ca9c5,
+    type: 2}
+  m_PrefabInternal: {fileID: 1027241283}
+  m_GameObject: {fileID: 1438656615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e287bb4e34132d44bb444ed161867ee2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: Death
+  rate: 10
+  loop: 0
+  sprites:
+  - {fileID: 21300004, guid: c4ab877befb9d1b41b8ca7d67ac8507f, type: 3}
+  - {fileID: 21300006, guid: c4ab877befb9d1b41b8ca7d67ac8507f, type: 3}
+  - {fileID: 21300008, guid: c4ab877befb9d1b41b8ca7d67ac8507f, type: 3}
+  - {fileID: 21300010, guid: c4ab877befb9d1b41b8ca7d67ac8507f, type: 3}
 --- !u!1 &1440859994
 GameObject:
   m_ObjectHideFlags: 0
@@ -7590,8 +7638,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1443187542}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 42.2228813, y: -1.75830221, z: 0}
-  m_LocalScale: {x: .797413826, y: .797414124, z: 1}
+  m_LocalPosition: {x: 59.9884338, y: -19.3732872, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1182937462}
   - {fileID: 1141745169}
@@ -7602,8 +7650,9 @@ Transform:
   - {fileID: 499641581}
   - {fileID: 860174539}
   - {fileID: 1254117448}
-  m_Father: {fileID: 0}
-  m_RootOrder: 21
+  - {fileID: 1878262628}
+  m_Father: {fileID: 112918401}
+  m_RootOrder: 6
 --- !u!212 &1443187544
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7713,8 +7762,10 @@ Transform:
   - {fileID: 242190680}
   - {fileID: 557383504}
   - {fileID: 1229247579}
+  - {fileID: 112918401}
+  - {fileID: 1898600538}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 18
 --- !u!212 &1456080522
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8587,6 +8638,7 @@ GameObject:
   - 114: {fileID: 1780392717}
   - 114: {fileID: 1780392716}
   - 114: {fileID: 1780392715}
+  - 114: {fileID: 1780392725}
   m_Layer: 12
   m_Name: Zombie
   m_TagString: Untagged
@@ -8675,7 +8727,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: 3.20000005, y: 1.84000003}
+  m_Size: {x: 1, y: 1.84000003}
   m_Center: {x: 0, y: 0}
 --- !u!114 &1780392720
 MonoBehaviour:
@@ -8690,6 +8742,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  dead: 0
 --- !u!114 &1780392721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8738,7 +8791,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d5d3cd443e9eb3543a53347cb01c8865, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b9f6ad8a1d3636948b4c0df2f287f6c3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1780392724
 Transform:
@@ -8751,7 +8804,27 @@ Transform:
   m_LocalScale: {x: .5, y: .699999988, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
+--- !u!114 &1780392725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400012, guid: 961a38edb1cc9d8449af6433676ca9c5,
+    type: 2}
+  m_PrefabInternal: {fileID: 1391585481}
+  m_GameObject: {fileID: 1780392714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e287bb4e34132d44bb444ed161867ee2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: Death
+  rate: 10
+  loop: 0
+  sprites:
+  - {fileID: 21300004, guid: c4ab877befb9d1b41b8ca7d67ac8507f, type: 3}
+  - {fileID: 21300006, guid: c4ab877befb9d1b41b8ca7d67ac8507f, type: 3}
+  - {fileID: 21300008, guid: c4ab877befb9d1b41b8ca7d67ac8507f, type: 3}
+  - {fileID: 21300010, guid: c4ab877befb9d1b41b8ca7d67ac8507f, type: 3}
 --- !u!1001 &1787702257
 Prefab:
   m_ObjectHideFlags: 0
@@ -9250,6 +9323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 30
+  dead: 0
 --- !u!114 &1862250235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9541,8 +9615,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1878262627}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -53.4207001, y: -17.0414352, z: 0}
-  m_LocalScale: {x: .797413826, y: .797414124, z: 1}
+  m_LocalPosition: {x: -119.942215, y: -19.1658669, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 594147842}
   - {fileID: 2113525852}
@@ -9551,8 +9625,8 @@ Transform:
   - {fileID: 1584767874}
   - {fileID: 681689805}
   - {fileID: 1720681202}
-  m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_Father: {fileID: 1443187543}
+  m_RootOrder: 9
 --- !u!212 &1878262629
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9776,16 +9850,16 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1898600537}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.60385132, y: -1.7545929, z: 0}
-  m_LocalScale: {x: .797413826, y: .797414124, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1542518016}
   - {fileID: 524043850}
   - {fileID: 1208190552}
   - {fileID: 1127679573}
   - {fileID: 761526659}
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_Father: {fileID: 1456080521}
+  m_RootOrder: 7
 --- !u!212 &1898600539
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9825,6 +9899,7 @@ GameObject:
   - 114: {fileID: 1929744797}
   - 114: {fileID: 1929744796}
   - 114: {fileID: 1929744795}
+  - 114: {fileID: 1929744805}
   m_Layer: 12
   m_Name: Zombie
   m_TagString: Untagged
@@ -9913,7 +9988,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: 3.20000005, y: 1.84000003}
+  m_Size: {x: 1, y: 1.84000003}
   m_Center: {x: 0, y: 0}
 --- !u!114 &1929744800
 MonoBehaviour:
@@ -9928,6 +10003,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  dead: 0
 --- !u!114 &1929744801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9976,7 +10052,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d5d3cd443e9eb3543a53347cb01c8865, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b9f6ad8a1d3636948b4c0df2f287f6c3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1929744804
 Transform:
@@ -9989,7 +10065,27 @@ Transform:
   m_LocalScale: {x: .5, y: .699999988, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
+--- !u!114 &1929744805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400012, guid: 961a38edb1cc9d8449af6433676ca9c5,
+    type: 2}
+  m_PrefabInternal: {fileID: 267560266}
+  m_GameObject: {fileID: 1929744794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e287bb4e34132d44bb444ed161867ee2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationName: Death
+  rate: 10
+  loop: 0
+  sprites:
+  - {fileID: 21300004, guid: c4ab877befb9d1b41b8ca7d67ac8507f, type: 3}
+  - {fileID: 21300006, guid: c4ab877befb9d1b41b8ca7d67ac8507f, type: 3}
+  - {fileID: 21300008, guid: c4ab877befb9d1b41b8ca7d67ac8507f, type: 3}
+  - {fileID: 21300010, guid: c4ab877befb9d1b41b8ca7d67ac8507f, type: 3}
 --- !u!1 &1994898799
 GameObject:
   m_ObjectHideFlags: 0
